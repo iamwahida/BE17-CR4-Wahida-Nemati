@@ -24,7 +24,6 @@ if ($_GET['id']) {
     header("location: error.php");
 }
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +46,6 @@ if ($_GET['id']) {
         height: 70px !important;
     }
     </style>
-
 </head>
 
 <body>
@@ -106,7 +104,7 @@ if ($_GET['id']) {
                     placeholder="Status" value="<?= $availabilty?>" /></td>
                 </tr>
                 <tr>
-                    <input type="hidden" name="id" value="<?= $libraryID ?>" />
+                    <input type="hidden" name="id" value="<?=$id?>" />
                     <input type="hidden" name="picture" value="<?= $image ?>" />
                     <td><button class="btn btn-success" type="submit">Save Changes</button></td>
                     <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
