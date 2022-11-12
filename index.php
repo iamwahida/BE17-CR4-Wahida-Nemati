@@ -8,7 +8,8 @@ $tbody = "";
 if (mysqli_num_rows($result) > 0) {
     while ($row =  mysqli_fetch_assoc($result)) {
         $tbody .= "
-        <div class='card p-3' style='width: 290px; text-align: center;'>
+        <div class='col-12 col-md-6 col-lg-4'>
+        <div class='card p-3' style='width: 300px; text-align: center;'>
         <img class='img-thumbnail' src='images/" . $row['image'] . "'>
   <div class='card-body'>
   <br>
@@ -23,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
   <a href='delete.php?id=" . $row['libraryID'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a>
   <br><br>
   <a href='details.php?id=" . $row['libraryID'] . "'><button class='btn btn-dark btn-sm' type='button'>Show details</button></a>
-
+  </div>
   </div>
   </div>
   </div>
@@ -59,8 +60,12 @@ if (mysqli_num_rows($result) > 0) {
   </div>
 </nav>
 
-    <div class="container container-fluid justify-content-center row row-cols-1 mt-5 mb-5 gap-3">
-        <?php echo $tbody; ?>
+    <div class="container mt-5 mb-5">
+      <div class="row justify-content-center">
+       
+          <?php echo $tbody; ?>
+
+      </div>
     </div>
 
 </body>
