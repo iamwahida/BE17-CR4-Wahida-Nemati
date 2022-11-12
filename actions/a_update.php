@@ -18,10 +18,10 @@ if ($_POST) {
 
     if ($picture->error === 0) {
         ($_POST['image'] == "product.png" ?: unlink("../images/$_POST[picture]"));
-        $sql = "UPDATE library SET title='$title', image ='$picture->fileName', ISBN_code='$ISBN_code', short_description = '$short_description', type='$type', author_first_name ='$author_first_name', author_last_name='$author_last_name', publisher_name='$publisher_name', publisher_date='$publisher_date', availabilty='$availabilty'  WHERE libraryID = $id";
-        
+        $sql = "UPDATE library SET title='$title', image ='$picture->fileName', ISBN_code='$ISBN_code', short_description = '$description', type='$type', author_first_name ='$firstname', author_last_name='$lastname', publisher_name='$publisher_name', publisher_date='$publisher_date', availabilty='$availability'  WHERE libraryID = $id";
+
     } else {
-        $sql = "UPDATE library SET title='$title', ISBN_code='$ISBN_code' WHERE libraryID = $id";
+        $sql = "UPDATE library SET title='$title', ISBN_code='$ISBN_code', short_description = '$description', type='$type', author_first_name ='$firstname', author_last_name='$lastname', publisher_name='$publisher_name', publisher_date='$publisher_date', availabilty='$availability' WHERE libraryID = $id";
     }
     if (mysqli_query($conn, $sql) == TRUE) {
         $class = "success";

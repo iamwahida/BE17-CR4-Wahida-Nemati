@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    background-color: bisque;
+}
+
+nav {
+    background-color: rgb(129, 72, 6);
+    .library{
+        color: white; padding-left: 20px;
+        &:hover {
+            background-color: bisque;
+            color: black;
+            padding-right: 30px;
+        }
+    }
+    .add {
+        color: white; padding-right: 20px;
+        &:hover {
+            background-color: bisque;
+            color: black;
+            padding: 10px;
+        }
+    }
+}
+
+.card {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    img {
+        width: 200px;
+        border-left: 4px solid rgb(148, 78, 12);
+        box-shadow: rgba(248, 248, 247, 0.4) 5px 5px, rgba(194, 192, 191, 0.3) 10px 10px, rgba(185, 183, 185, 0.2) 15px 15px, 
+        rgba(85, 84, 85, 0.1) 20px 20px, rgba(56, 55, 56, 0.02) 25px 25px;
+
+        &:hover {
+            transform: rotate(357deg)
+        }
+    }
+}

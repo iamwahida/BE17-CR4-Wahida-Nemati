@@ -8,11 +8,11 @@ $tbody = "";
 if (mysqli_num_rows($result) > 0) {
     while ($row =  mysqli_fetch_assoc($result)) {
         $tbody .= "
-        <div class='card p-3' style='width: 260px;'>
+        <div class='card p-3' style='width: 280px;'>
         <img class='img-thumbnail' src='images/" . $row['image'] . "'>
   <div class='card-body'>
   <br>
-    <h5 class='card-title'>". $row['title'] ."</h5>
+    <h4 class='card-title'>". $row['title'] ."</h4>
   <ul class='list-group list-group-flush'>
     <li class='list-group-item'><strong>Type: </strong>" . $row['type'] . "</li>
     <li class='list-group-item'><strong>Author's name: </strong>" . $row['author_first_name'] . " " . $row['author_last_name'] . "</li>
@@ -20,7 +20,8 @@ if (mysqli_num_rows($result) > 0) {
   </ul>
   <div class='card-body'>
   <a href='update.php?id=" . $row['libraryID'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-  <a href='delete.php?id=" . $row['libraryID'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a><br>
+  <a href='delete.php?id=" . $row['libraryID'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a>
+  <br><br>
   <a href='details.php?id=" . $row['libraryID'] . "'><button class='btn btn-dark btn-sm' type='button'>Show details</button></a>
 
   </div>
@@ -46,15 +47,19 @@ if (mysqli_num_rows($result) > 0) {
     <!-- BOOTSTRAP LINK -->
     <?php require_once "./components/bootstrap.php";?>
     <!-- STYLING SCSS LINK -->
-    <link rel="stylesheet" href="./styling/style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-<div class='mb-3 mt-3'>
-    <span class="btn-1"><a href="create.php">
-                Add a book, CD or DVD!
-            </a></span>
-        </div>
-    <div class="container d-flex justify-content-center row row-cols-1 mt-5 mb-5 gap-3">
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="library navbar-brand" href="index.php">Our library</a>
+    <a class="add nav-link active" href="create.php">
+        Add a book, CD or DVD!</a>
+  </div>
+</nav>
+
+    <div class="container justify-content-center row row-cols-1 mt-5 mb-5 gap-3">
         <?php echo $tbody; ?>
     </div>
 
