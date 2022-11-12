@@ -37,13 +37,22 @@ if ($_GET['id']) {
     <!-- BOOTSTRAP LINK -->
     <?php require_once "./components/bootstrap.php";?>
     <!-- STYLING SCSS LINK -->
-    <link rel="stylesheet" href="./styling/style.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <div class="container d-flex justify-content-center row row-cols-1 mt-5 mb-5 gap-3">
-        <div class="card mb-3" style="max-width: 540px;">
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="library navbar-brand" href="index.php">Our library</a>
+    <a class="add nav-link active" href="create.php">
+        Add a book, CD or DVD!</a>
+  </div>
+</nav>
+
+    <div class="container d-flex justify-content-center mt-5 mb-5">
+        <div class="card mb-3" style="max-width: 600px;">
   <div class="row g-0">
-    <div class="col-md-4 p-2">
+    <div class="col-md-4 p-3">
       <img src='./images/<?php echo $picture ?>' class="img-fluid" alt="<?php echo $title ?>">
     </div>
     <div class="col-md-8">

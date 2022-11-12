@@ -32,8 +32,11 @@ if ($_GET['id']) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Update</title>
     <?php require_once "./components/bootstrap.php"; ?>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./style/style.css">
+
     <style type="text/css">
     fieldset {
         margin: auto;
@@ -49,6 +52,14 @@ if ($_GET['id']) {
 </head>
 
 <body>
+        <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="library navbar-brand" href="index.php">Our library</a>
+    <a class="add nav-link active" href="create.php">
+        Add a book, CD or DVD!</a>
+  </div>
+</nav>
     <fieldset>
         <legend class='h2'>Update request <img class='img-thumbnail rounded-circle' src='./images/<?= $picture ?>'
                 alt=""></legend>
@@ -106,7 +117,7 @@ if ($_GET['id']) {
                 <tr>
                     <input type="hidden" name="id" value="<?=$id?>" />
                     <input type="hidden" name="picture" value="<?= $image ?>" />
-                    <td><button class="btn btn-success" type="submit">Save Changes</button></td>
+                    <td><button style="color: white; background-color: rgb(129, 72, 6);" class="btn" type="submit">Save Changes</button></td>
                     <td><a href="index.php"><button class="btn btn-warning" type="button">Back</button></a></td>
                 </tr>
             </table>

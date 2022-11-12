@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding</title>
     <?php require_once "./components/bootstrap.php";?>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./style/style.css">
     <style>
     fieldset {
         margin: auto;
@@ -17,6 +19,14 @@
 </head>
 
 <body>
+    <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="library navbar-brand" href="index.php">Our library</a>
+    <a class="add nav-link active" href="create.php">
+        Add a book, CD or DVD!</a>
+  </div>
+</nav>
     <fieldset>
         <legend class='h2'>Add a book, CD or a DVD</legend>
         <form action="actions/a_create.php" method="post" enctype="multipart/form-data">
@@ -62,8 +72,7 @@
                     <td><input class='form-control' type="text" name="availabilty" placeholder="Status" /></td>
                 </tr>
                 <tr>
-                    <td><button class='btn btn-success' type="submit">Insert Product</button></td>
-                    <td><a href="index.php"><button class='btn btn-warning' type="button">Home</button></a></td>
+                    <td><button style="color: white; background-color: rgb(129, 72, 6);" class='btn' type="submit">Insert Product</button></td>
                 </tr>
             </table>
         </form>

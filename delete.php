@@ -33,8 +33,10 @@ if ($_GET['id']) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Delete</title>
     <?php require_once "components/bootstrap.php"; ?>
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="./style/style.css">
     <style type="text/css">
     fieldset {
         margin: auto;
@@ -50,6 +52,14 @@ if ($_GET['id']) {
 </head>
 
 <body>
+        <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="library navbar-brand" href="index.php">Our library</a>
+    <a class="add nav-link active" href="create.php">
+        Add a book, CD or DVD!</a>
+  </div>
+</nav>
     <fieldset>
         <legend class='h2 mb-3'>Delete request <img class='img-thumbnail rounded-circle'
                 src='./images/<?php echo $picture ?>' alt="<?php echo $title ?>"></legend>

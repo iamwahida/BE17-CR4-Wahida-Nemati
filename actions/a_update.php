@@ -45,10 +45,20 @@ if ($_POST) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php require_once "../components/bootstrap.php"; ?>
-    <title>CRUD</title>
+        <!-- STYLING SCSS LINK -->
+        <link rel="stylesheet" href="../style/style.css">
+    <title>Update</title>
 </head>
 
 <body>
+     <!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container-fluid">
+    <a class="library navbar-brand" href="../index.php">Our library</a>
+    <a class="add nav-link active" href="../create.php">
+        Add a book, CD or DVD!</a>
+  </div>
+</nav>
     <div class="container">
         <div class="mt-3 mb-3">
             <h1>Update request response</h1>
@@ -57,7 +67,7 @@ if ($_POST) {
             <p><?php echo $message; ?></p>
             <p><?php echo $uploadError; ?></p>
             <a href='../update.php?id=<?= $id ?>'><button class="btn btn-warning" type='button'>Back</button></a>
-            <a href='../index.php'><button class="btn btn-success" type='button'>Home</button></a>
+            <a href='../index.php'><button style='color: white; background-color: rgb(129, 72, 6);' class="btn" type='button'>Home</button></a>
         </div>
     </div>
 
